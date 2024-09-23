@@ -7,7 +7,7 @@ import { fetchEvents } from "../../util/http.js";
 export default function NewEventsSection() {
   const { error, data, isPending, isError } = useQuery({
     queryFn: ({ signal, queryKey }) => fetchEvents({ signal, ...queryKey[1] }),
-    queryKey: ["events", { max: 3 }],
+    queryKey: ["events", { max: 4 }],
     staleTime: 5000,
   });
 
